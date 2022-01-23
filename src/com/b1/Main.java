@@ -50,6 +50,8 @@ public class Main {
         reservedKeywords();
 
         arithmeticOperations();
+        mathClass();
+        comparisonOperators();
 
         thisIsAnInsanelyLongMethodNameToTestHeadsay();
     }
@@ -89,9 +91,9 @@ public class Main {
     private static void Classes(){
         headsay("Classes()");
         Person alex = new Person("Alex", 42);
-        tabsay("before changing alex: " + alex.name + " " + alex.age + " " + alex.name + " " + alex.age);
+        say("before changing alex: " + alex.name + " " + alex.age + " " + alex.name + " " + alex.age);
         alex.name = "Alexandra";
-        tabsay("before changing alex: " + alex.name + " " + alex.age + " " + alex.name + " " + alex.age);
+        say("before changing alex: " + alex.name + " " + alex.age + " " + alex.name + " " + alex.age);
     }
 
     private static void importKeywords(){
@@ -107,17 +109,17 @@ public class Main {
         java.util.Date date = new java.util.Date();
         java.time.LocalDate localDate = java.time.LocalDate.now();
         java.time.LocalDateTime localDateTime = java.time.LocalDateTime.now();
-        System.out.println(date);
-        System.out.println(localDate);
-        System.out.println(localDateTime);
+        say(date);
+        say(localDate);
+        say(localDateTime);
     }
 
     private static void reservedKeywords(){
         headsay("reservedKeywords()");
-        System.out.println("These won't work because they use reserved keywords: ");
-        System.out.println("int public = 0; - public is reserved");
-        System.out.println("String final = \"final\"; - final is reserved");
-        System.out.println("others are private, protected, void, class, etc.");
+        say("These won't work because they use reserved keywords: ");
+        say("int public = 0; - public is reserved");
+        say("String final = \"final\"; - final is reserved");
+        say("others are private, protected, void, class, etc.");
     }
 
     private static void arithmeticOperations(){
@@ -126,15 +128,44 @@ public class Main {
         int ten = 10;
         int two = 2;
         int addition = ten + two;
-        System.out.println(ten + "+" + two + "=" + addition);
-        System.out.println(ten + "-" + two + "=" + (ten - two));
-        System.out.println(ten + "*" + two + "=" + (ten * two));
-        System.out.println(ten + "/" + two + "=" + (ten / two));
-        System.out.println(ten + "%" + two + "=" + (ten % two));
-        System.out.println("10+2+90=" + (10+2+90)); // notice the needed () brackets here!
-        System.out.println("10-2=" + (10-2));
-        System.out.println("10*2=" + (10*2));
-        System.out.println("10%3=" + (10%3));
+        say(ten + "+" + two + "=" + addition);
+        say(ten + "-" + two + "=" + (ten - two));
+        say(ten + "*" + two + "=" + (ten * two));
+        say(ten + "/" + two + "=" + (ten / two));
+        say(ten + "%" + two + "=" + (ten % two));
+        say("10+2+90=" + (10+2+90)); // notice the needed () brackets here!
+        say("10-2=" + (10-2));
+        say("10*2=" + (10*2));
+        say("10%3=" + (10%3));
+        say("10*(2+7)=" + 10*(2+7));
+        say("(10*2)+7=" + (10*2)+7);
+        say("10*2-4.5=" + (10*2-4.5));
+    }
+
+    private static void mathClass(){
+        // some examples how to use the builtin Math class
+        headsay("mathClass()");
+        say("Math.abs(-10) = " + Math.abs(-10));
+        say("Math.max(3.6, 10.11) = " + Math.max(3.6, 10.11));
+        say("Math.min(3.6, 10.11) = " + Math.min(3.6, 10.11));
+        say("Math.pow(5.0, 2.0) = " + Math.pow(5.0, 2.0));
+        say("(int)Math.pow(5.0, 2.0) = " + (int)Math.pow(5.0, 2.0)); // casting a float result to an integer with (int)
+        say("Math.sqrt(25) = " + Math.sqrt(25));
+        say("(int)Math.sqrt(25) = " + (int)Math.sqrt(25)); // another casting to int
+        say("Math.PI = " + Math.PI);
+    }
+
+    private static void comparisonOperators(){
+        headsay("comparisonOperators()");
+        int khalidAge = 20, mariamAge = 20;
+        say("int khalidAge = 20, mariamAge = 20;");
+        say("let's compare their ages with some boolean expressions:");
+        say("- Khalid is older than Mariam (khalidAge > mariamAge) is: " + (khalidAge > mariamAge));
+        say("- Khalid is older than or the same age as Mariam (khalidAge >= mariamAge) is: " + (khalidAge >= mariamAge));
+        say("- Khalid is younger than Mariam (khalidAge < mariamAge) is: " + (khalidAge < mariamAge));
+        say("- Khalid is younger than or the same age as Mariam (khalidAge <= mariamAge) is: " + (khalidAge <= mariamAge));
+        say("- Khalid is as old as Mariam (khalidAge == mariamAge) is: " + (khalidAge == mariamAge));
+        say("- Khalid is not as old as Mariam (khalidAge != mariamAge) is: " + (khalidAge != mariamAge));
     }
 
     private static void thisIsAnInsanelyLongMethodNameToTestHeadsay(){
@@ -153,6 +184,10 @@ public class Main {
             this.name = name;
             this.age = age;
         }
+    }
+
+    private static void say(Object obj){
+        System.out.println(obj);
     }
 
     private static void headsay(String str){
@@ -192,7 +227,7 @@ public class Main {
         for (int i = 0; i < str.length(); i++) {
             System.out.print(str.charAt(i) + "\t");
         }
-        System.out.print("= = o o ~ ~ - -");
+        System.out.println("= = o o ~ ~ - -");
         System.out.println();
     }
 
@@ -204,6 +239,5 @@ public class Main {
     private static void compareString(String str1, String str2) {
         // outputs true if str2 is exactly the same as str1
         System.out.println(str2 + " equals " + str1 + " is " + str2.equals(str1));
-
     }
 }
