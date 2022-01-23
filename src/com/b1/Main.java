@@ -81,8 +81,8 @@ public class Main {
     private static void ReferenceTypes(){
         headsay("ReferenceTypes()");
         // non-primitive data types AKA reference types
-        String name = "Amigoscode"; // => the new String() isn't needed. String magic
-        // String name = "AMIGOSCODE";
+
+        String name = "b1naryzer0"; // => the new String() isn't needed because of java string magic
         String now = LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         String nowday = LocalDate.now().format(DateTimeFormatter.ofPattern("dd"));
         String[] strArray3 = {name, now, nowday};
