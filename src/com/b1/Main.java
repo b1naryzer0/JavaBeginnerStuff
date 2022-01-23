@@ -17,7 +17,7 @@ public class Main {
     private static String arg1 = "test";
     private static int int1 = 100;
     private static double dbl1 = 100.40;
-    private static String amigo = "AMIGOSCODE";
+    private static String b1coding = "b1naryzer0 coding";
 
     public static void main(String[] args) {
         headsay("main");
@@ -34,17 +34,17 @@ public class Main {
         ReferenceTypes();
         Classes();
 
-        charsay(amigo);
-        chartabsay(amigo);
-        chartabprettysay(amigo);
+        charsay(b1coding);
+        chartabsay(b1coding);
+        chartabprettysay(b1coding);
 
         headsay("checkForString()");
-        checkForString(amigo, "CODE");
-        checkForString(amigo, "AMIGA");
+        checkForString(b1coding, "coding");
+        checkForString(b1coding, "sleeping");
 
         headsay("compareString()");
-        compareString(amigo, "AMIGOSCODE");
-        compareString(amigo, "AMIGA");
+        compareString(b1coding, "b1naryzer0 coding");
+        compareString(b1coding, "b1naryzer0 sleeping");
 
         importKeywords();
         reservedKeywords();
