@@ -52,6 +52,7 @@ public class Main {
         arithmeticOperations();
         mathClass();
         comparisonOperators();
+        logicalOperators();
 
         thisIsAnInsanelyLongMethodNameToTestHeadsay();
     }
@@ -166,6 +167,20 @@ public class Main {
         say("- Khalid is younger than or the same age as Mariam (khalidAge <= mariamAge) is: " + (khalidAge <= mariamAge));
         say("- Khalid is as old as Mariam (khalidAge == mariamAge) is: " + (khalidAge == mariamAge));
         say("- Khalid is not as old as Mariam (khalidAge != mariamAge) is: " + (khalidAge != mariamAge));
+    }
+
+    private static void logicalOperators(){
+        headsay("logicalOperators()");
+        // examples - see https://www.delftstack.com/de/howto/java/xor-in-java/
+        boolean isAdult = false;
+        boolean isStudent = true;
+        boolean isCoder = true;
+        say ("boolean isAdult = false, isStudent = true;");
+        say("isAdult AND isStudent (&&) = " + (isAdult && isStudent));                      // true if both conditions are true
+        say("isAdult OR isStudent (||) = " + (isAdult || isStudent));                       // true if one condition is true
+        say("(isAdult OR isStudent) AND isCoder = " + ((isAdult || isStudent) && isCoder)); // true if (either isAdult or isStudent is true) AND isCoder  is true
+        say("isAdult NOR isStudent = " + (!(isAdult || isStudent)));                        // true if both conditions are false
+        say("isAdult XOR isStudent = " + (isAdult ^ isStudent));                            // true if the conditions are different, ^ is the same as !=
     }
 
     private static void thisIsAnInsanelyLongMethodNameToTestHeadsay(){
